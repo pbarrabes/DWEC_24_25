@@ -1,0 +1,1 @@
+document.write("<p>Parrafo añadido con document.write 2</p>")
