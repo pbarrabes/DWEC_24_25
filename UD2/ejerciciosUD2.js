@@ -125,7 +125,7 @@ Comenta el código con los comentarios que estimes necesarios.
  */
 // Esta solucion muestra como incluir varis casos al no poner el break en cada case.
 // Otras opciones para el 17 pasarian por pasar fruta a minusculas. En la linea de abajo se muestra con el metodo que tiene en cuenta la localizacion. 
-//let fruta = prompt("Dime un nombre de fruta").toLocaleLowerCase() ; 
+//let fruta = prompt("Dime un nombre de fruta").toLowerCase() ; 
 /* let fruta=prompt("Dime un nombre de fruta");
 
 switch (fruta) {
@@ -154,10 +154,50 @@ suma3, función flecha. */
 /* function suma(a=0,...resto){
     let suma=parseInt(a);
     for (const dato of resto) {//Por ejemplo con for of. Hay muchas maneras de hacerlo.
-        suma=suma+parseInt(dato);
+        suma+=parseInt(dato);
     }
     return isNaN(suma)?"Error":suma;
 }
-console.log(suma(2,3,4,5));
+console.log(suma());
+console.log(suma(2,5,7,9));
 console.log(suma("2",3));
 console.log(suma("er ",2)); */
+
+ /*21 Escribe una función denominada “operacionesEncadenadas” con los siguientes argumentos
+Dos valores que actuarán de datos para las operaciones.
+El tercero y cuarto dos funciones callback que definiremos aparte. La primera devolverá la suma de los dos datos. La segunda el producto
+El último argumento será una función callback que pasaremos en la llamada a la función  como función flecha con un mensaje por pantalla al usuario */
+/* let a =parseInt(prompt("Damee un numero"));
+let b =parseInt(prompt("Damee otro numero"));
+
+let operacionesEncadenadas= function(x,y,operacion1,operacion2,final){
+
+    document.write(operacion1(x,y));
+    document.write(operacion2(x,y));
+    final();
+}
+
+function suma(op1,op2){
+    return op1+op2;
+}
+
+let producto= (x=1,y)=> x*y
+
+operacionesEncadenadas(a,b,suma,producto,()=>alert("Hasta luego"));  */
+
+/* 22 Crea una función que sume todos los elementos de un array numérico.(Sin recorrer el Array) */
+/* 
+function sumaArray(array){
+    return array.reduce((suma,valorActual)=> suma+valorActual)
+}
+
+document.write(sumaArray([1,2,3])); */
+
+/* 23 Encuentra y muestra todos los números pares de un array. (Sin recorrer el Array)*/
+/* 
+const array=[2,5,7,3,4,6,44,67];
+document.write(array.reduce(buscarPares,0)); 
+let buscarPares=(contador,numeroActual)=>numeroActual%2==0?++contador:contador;//OJO funcion por expresion. No se puede usar arriba.
+
+*/ 
+// Ojo con NO inicializar el primer valor, toma el primero. OJO tambien con el ++. Detras no funciona
