@@ -115,3 +115,49 @@ do {
     for (let i = 0; i <= 10;i++){
         document.write(`<p>${numero} por ${i} = ${numero * i}</p>`);
     } */
+
+    /* 16 y 17 Crea un programa que sea un “pequeño traductor” de nombres de frutas. 
+A partir de una lista de 5 Frutas en español (“Pera”, “Manzana”,”Piña”,”Fresa”,”Naranja”) 
+el programa pedirá al usuario el nombre de una fruta, en el caso de que corresponda al listado le mostrará en un cuadro de diálogo la traducción al Inglés. 
+En el caso de otro texto mostrará “Fruta desconocida”. Para este ejercicio debes usar una estructura switch.
+
+Comenta el código con los comentarios que estimes necesarios.
+ */
+// Esta solucion muestra como incluir varis casos al no poner el break en cada case.
+// Otras opciones para el 17 pasarian por pasar fruta a minusculas. En la linea de abajo se muestra con el metodo que tiene en cuenta la localizacion. 
+//let fruta = prompt("Dime un nombre de fruta").toLocaleLowerCase() ; 
+/* let fruta=prompt("Dime un nombre de fruta");
+
+switch (fruta) {
+    case "Pera":
+    case "pera":// Lo incluyo tambien para la primera en minuscula
+        alert(`${fruta} en ingles se dice Pear`);    
+        break;
+    case "Manzana":
+    case "manzana":
+        alert(`${fruta} en ingles se dice Apple`);    
+        
+        break;
+
+    default:
+        alert(`No se como se dice ${fruta} en ingles`);
+        break;
+} */
+
+/* 20 Escribe tres funciones suma que acepte un número indeterminado de argumentos y devuelva la suma de todos ellos. 
+Debes evitar que la función devuelva “undefined” si no se le pasa ningún argumento, en cuyo caso el valor que devuelva tiene que ser 0. 
+Debes escribir cada versión de la función  de las tres formas que hemos visto.
+suma1 , declaración tradicional de una función
+suma2, función como expresión.
+suma3, función flecha. */
+
+/* function suma(a=0,...resto){
+    let suma=parseInt(a);
+    for (const dato of resto) {//Por ejemplo con for of. Hay muchas maneras de hacerlo.
+        suma=suma+parseInt(dato);
+    }
+    return isNaN(suma)?"Error":suma;
+}
+console.log(suma(2,3,4,5));
+console.log(suma("2",3));
+console.log(suma("er ",2)); */
