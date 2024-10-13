@@ -194,10 +194,19 @@ function sumaArray(array){
 document.write(sumaArray([1,2,3])); */
 
 /* 23 Encuentra y muestra todos los números pares de un array. (Sin recorrer el Array)*/
-/* 
-const array=[2,5,7,3,4,6,44,67];
-document.write(array.reduce(buscarPares,0)); 
-let buscarPares=(contador,numeroActual)=>numeroActual%2==0?++contador:contador;//OJO funcion por expresion. No se puede usar arriba.
 
-*/ 
+const array=[2,5,7,3,4,6,44,67];
+let buscarPares=(contador,numeroActual)=>{
+    numeroActual%2==0?document.write(`${numeroActual}<br>`):"";
+}
+array.reduce(buscarPares,0); 
+
+// Muy rebuscado, en realidad el ejemplo que hice el viernes era para contarlos. Mejor con Filter
+
+document.write(`${array.filter((numero)=>numero%2==0)}`);// document.write muestra el array con sus elementos separados por ,
+
+
+ 
 // Ojo con NO inicializar el primer valor, toma el primero. OJO tambien con el ++. Detras no funciona
+//Otra alternativa al uso de reduce para buscar todos los elementos que cumplan una condicion, filter.
+
