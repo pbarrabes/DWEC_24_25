@@ -195,13 +195,13 @@ document.write(sumaArray([1,2,3])); */
 
 /* 23 Encuentra y muestra todos los números pares de un array. (Sin recorrer el Array)*/
 
-const array=[2,5,7,3,4,6,44,67];
+/* const array=[2,5,7,3,4,6,44,67];
 let buscarPares=(contador,numeroActual)=>{
     numeroActual%2==0?document.write(`${numeroActual}<br>`):"";
 }
-array.reduce(buscarPares,0); 
+array.reduce(buscarPares,0);  */
 
-// Muy rebuscado, en realidad el ejemplo que hice el viernes era para contarlos. Mejor con Filter
+// Muy rebuscado lo de arriba y no es lo adecuado, en realidad el ejemplo que hice el viernes era para contarlos. Mejor con Filter
 
 //document.write(`${array.filter((numero)=>numero%2==0)}`);// document.write muestra el array con sus elementos separados por ,
 // Debajo lo mismo pero menos compacto.
@@ -212,6 +212,14 @@ array.reduce(buscarPares,0);
 let arrayPares=array.filter(filtro);
 document.write(arrayPares); */
 
- 
+/*  24 Encuentra la palabra más larga en un array de palabras. */
+const palabras=["hola","perro","caracola","jes"];
+//Ahora si otra vez abusando del reduce
+
+let palabraMaslarga=palabras.reduce(
+    (masLarga,palabraActual)=>palabraActual.length>=masLarga.length? palabraActual: masLarga);
+document.write(palabraMaslarga);
+
+
 
 
