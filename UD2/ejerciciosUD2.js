@@ -203,10 +203,15 @@ array.reduce(buscarPares,0);
 
 // Muy rebuscado, en realidad el ejemplo que hice el viernes era para contarlos. Mejor con Filter
 
-document.write(`${array.filter((numero)=>numero%2==0)}`);// document.write muestra el array con sus elementos separados por ,
+//document.write(`${array.filter((numero)=>numero%2==0)}`);// document.write muestra el array con sus elementos separados por ,
+// Debajo lo mismo pero menos compacto.
+/* function filtro(elemento){
+    return elemento%2==0;
+}
 
+let arrayPares=array.filter(filtro);
+document.write(arrayPares); */
 
  
-// Ojo con NO inicializar el primer valor, toma el primero. OJO tambien con el ++. Detras no funciona
-//Otra alternativa al uso de reduce para buscar todos los elementos que cumplan una condicion, filter.
+
 
