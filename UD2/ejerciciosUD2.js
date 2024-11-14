@@ -396,7 +396,7 @@ diasHastaFinDeCurso(); */
 /* 33 Crea un programa que pida por parámetro tu cumpleaños (no hace falta el año) 
 y saque todos los años en que tu cumpleaños va a caer en domingo desde este año hasta el año 2100.
  Por ejemplo, introducir el 05/23 para el día 23 de mayo. */
-
+/* 
  let cumpleaños=prompt("Dime tu fecha de cumpleaños en formato mm/dd");
  const fechaCumpleaños = new Date(`"2024/${cumpleaños}"`);
  //console.log(fechaCumpleaños.toDateString());
@@ -405,4 +405,51 @@ y saque todos los años en que tu cumpleaños va a caer en domingo desde este a�
          document.write(`<p>El dia ${fechaCumpleaños.toLocaleDateString()} es domingo</p>`);
      }
      fechaCumpleaños.setFullYear(i+1);
- } 
+ }  */
+
+ /*  34 Escribe una función para mostrar el día de la semana en formato corto: 
+ ‘MO’, ‘TU’, ‘WE’, ‘TH’, ‘FR’, ‘SA’, ‘SU’. */
+/*  function diaSemanaCorto(){
+    let fecha=new Date();
+    switch (fecha.getDay()) {
+        case 0:
+            document.write(`<p>SU</p>`);
+            break;
+        case 1:
+            document.write(`<p>MO</p>`);
+            break;
+        case 2:
+            document.write(`<p>TU</p>`);
+            break;
+        case 3:
+            document.write(`<p>WE</p>`);
+            break;
+        case 4:
+            document.write(`<p>TH</p>`);
+            break;
+        case 5:
+            document.write(`<p>FR</p>`);
+            break;
+        case 6:
+            document.write(`<p>SA</p>`);
+            break;
+        default:
+            break;
+    }
+ }
+    diaSemanaCorto(); */
+/* 35 Escribe una función que devuelva el último día del mes dado para un año dado. 
+A veces es 30, 31 o incluso 28/29 para febrero. */
+/* function ultimoDiaMes(mes,anio){
+    let fecha=new Date(anio,mes,0);// EL TRUCO ESTA EN QUE AL PONER 0 LA FECHA QUE TOMA ES EL ULTIMO DIA DEL MES ANTERIOR, PERO COMO LOS MESES LOS EMPIZA EN 0  , TACHAN
+    document.write(`<p>El ultimo dia del mes ${mes} del año ${anio} es ${fecha.getDate()}</p>`);
+}
+ultimoDiaMes(2,2020); */
+
+/* 36 Escribe una función que devuelva la cantidad de segundos transcurridos 
+desde el comienzo del día. */
+/* function segundosTranscurridos(){
+    let fecha=new Date();
+    document.write(`<p>Desde el comienzo del dia han pasado ${fecha.getHours()*3600+fecha.getMinutes()*60+fecha.getSeconds()} segundos</p>`);
+}
+segundosTranscurridos(); */
